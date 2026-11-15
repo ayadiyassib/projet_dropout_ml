@@ -96,7 +96,7 @@ Implémenté au sein de [`src/preprocessing.py`](./src/preprocessing.py), le pip
 
 Code source : [`src/decision_tree_scratch.py`](./src/decision_tree_scratch.py)
 
-Conformément à la consigne de l'enseignant, un arbre de classification binaire complet a été programmé **exclusivement avec NumPy et Pandas**, sans Scikit-Learn.
+L'arbre de classification binaire complet a été programmé **exclusivement avec NumPy et Pandas**, sans Scikit-Learn.
 
 ### Fondement Théorique : Diminution Moyenne d'Impureté (MDI)
 À chaque nœud interne, la sélection de la coupure optimale maximise le gain d'impureté de Gini :
