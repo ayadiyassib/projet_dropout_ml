@@ -204,7 +204,7 @@ En étendant le clustering à $k = 3$, K-Means scinde le groupe standard et isol
 
 ---
 
-## 7. Guide de Reproduction et Exécution
+## 📋 7. Guide de Reproduction et Exécution
 
 ### Installation de l'Environnement
 ```bash
