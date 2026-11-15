@@ -11,16 +11,16 @@ def load_dataset():
     Si indisponible via ucimlrepo, charge depuis data/raw/data.csv.
     """
     try:
+        # Installation from our data folder
+        df = pd.read_csv("data/raw/data.csv", sep=";")
+        X = df.drop(columns=["Target"])
+        y = df[["Target"]]
+    except Exception:
+        # installation direct and automatique
         dataset = fetch_ucirepo(id=697)
         X = dataset.data.features.copy()
         y = dataset.data.targets.copy()
         df = pd.concat([X, y], axis=1)
-
-    except Exception:
-        # Fallback si le téléchargement automatique échoue
-        df = pd.read_csv("data/raw/data.csv", sep=";")
-        X = df.drop(columns=["Target"])
-        y = df[["Target"]]
 
     # Nettoyage des noms de colonnes (suppression d'espaces éventuels)
     X.columns = [c.strip().replace(" ", "_").replace("'", "") for c in X.columns]
