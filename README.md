@@ -1,7 +1,7 @@
 <div align="center">
 
-# Projet_dropout_ml
-### Pipeline d'Apprentissage Automatique : Sélection d'Attributs, Classification Supervisée & Clustering Non Supervisé
+#  🎓 Projet_dropout_ml
+### 🔬 Pipeline d'Apprentissage Automatique : Sélection d'Attributs, Classification Supervisée & Clustering Non Supervisé
 
 **Module :** Apprentissage Automatique — Master IDIA (2026–2027)  
 **Faculté des Sciences et Techniques de Tanger (FSTT)**  
@@ -20,7 +20,7 @@
 
 ---
 
-## Sommaire Exécutif
+## 📑 Sommaire Exécutif
 
 1. [Contexte et Problématique Métier](#1-contexte-et-problématique-métier)
 2. [Architecture du Dépôt et Cartographie du Code](#2-architecture-du-dépôt-et-cartographie-du-code)
@@ -33,7 +33,7 @@
 
 ---
 
-## 1. Contexte et Problématique Métier
+## 📌 1. Contexte et Problématique Métier
 
 Le décrochage universitaire engendre des répercussions socio-économiques et institutionnelles majeures. L'objectif de ce projet est de concevoir un système d'alerte précoce capable d'estimer, dès la fin de la première année universitaire, si un étudiant :
 * Se dirige vers l'obtention de son diplôme (**`Graduate`**, 50.0 % des effectifs),
@@ -44,7 +44,7 @@ Le jeu de données officiel de l'**UCI Machine Learning Repository (ID: 697)** c
 
 ---
 
-## 2. Architecture du Dépôt et Cartographie du Code
+## 📂 2. Architecture du Dépôt et Cartographie du Code
 
 L'arborescence du projet a été construite de façon modulaire. Cliquez directement sur les liens ci-dessous pour accéder aux fichiers sources :
 
@@ -59,26 +59,39 @@ L'arborescence du projet a été construite de façon modulaire. Cliquez directe
 
 ```text
 projet_dropout_ml/
-├── data/
-│   ├── raw/data.csv
-│   └── processed/data_clean.csv
-├── src/
-│   ├── __init__.py
-│   ├── preprocessing.py
-│   ├── decision_tree_scratch.py
-│   ├── supervised_models.py
-│   ├── kmeans_analysis.py
-│   └── evaluation_viz.py
-├── figures/
-├── report/
-├── projet_ml_dropout.ipynb
-├── requirements.txt
-└── README.md
+│
+├── 📂 data/
+│   ├── raw/data.csv                    <- Données sources brutes téléchargées depuis l'UCI
+│   └── processed/data_clean.csv        <- Jeu nettoyé, encodé et prêt pour l'entraînement
+│
+├── 📂 src/                             <- Modules algorithmiques réutilisables
+│   ├── __init__.py                     <- Initialisation du package source
+│   ├── preprocessing.py                <- Pipeline d'acquisition, encodage et normalisation
+│   ├── decision_tree_scratch.py        <- Arbre de décision custom et calcul MDI (NumPy/Pandas)
+│   ├── supervised_models.py            <- Modèles de classification (Régression Logistique & SVM)
+│   ├── kmeans_analysis.py              <- Algorithme K-Means, Silhouette et analyse des centroïdes
+│   └── evaluation_viz.py               <- Moteur de visualisation (Courbes ROC, Matrices de confusion)
+│
+├── 📂 figures/                         <- Artefacts visuels exportés en haute résolution
+│   ├── feature_importance.png
+│   ├── confusion_matrices.png
+│   ├── roc_curves.png
+│   ├── silhouette_score.png
+│   ├── cluster_centroids.png
+│   └── clusters_distribution.png
+│
+├── 📂 report/
+│   ├── Rapport_Projet_ML.docx          <- Document éditable
+│   └── Rapport_Projet_ML.pdf           <- Livrable de synthèse final
+│
+├── 📓 projet_ml_dropout.ipynb          <- Notebook Jupyter principal orchestrant le pipeline
+├── 📋 requirements.txt                 <- Spécification stricte des dépendances logicielles
+└── 📖 README.md                        <- Documentation générale du projet
 ```
 
 ---
 
-## 3. Prétraitement et Pipeline de Données
+## ⚙️ 3. Prétraitement et Pipeline de Données
 
 Implémenté au sein de [`src/preprocessing.py`](./src/preprocessing.py), le pipeline effectue :
 
@@ -129,7 +142,7 @@ Code source : [`src/supervised_models.py`](./src/supervised_models.py) | Visuali
 
 Les deux modèles sont entraînés uniquement sur les **8 variables sélectionnées** avec pondération équilibrée (`class_weight='balanced'`) pour compenser le déséquilibre de la classe `Enrolled`.
 
-### Synthèse Comparative des Performances
+### 📊 Synthèse Comparative des Performances
 
 | Métrique d'Évaluation | Régression Logistique (Multinomiale) | Support Vector Machine (Noyau RBF) | Modèle Vainqueur |
 | :--- | :---: | :---: | :---: |
@@ -208,7 +221,7 @@ jupyter notebook projet_ml_dropout.ipynb
 
 ---
 
-## 8. Références Bibliographiques et Fondations Algorithmiques
+## 📚 8. Références Bibliographiques et Fondations Algorithmiques
 
 La conception de ce pipeline repose sur la littérature scientifique du domaine et sur les formalisations algorithmiques de référence suivantes :
 
