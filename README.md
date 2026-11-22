@@ -16,6 +16,7 @@
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Validation-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 [![Status](https://img.shields.io/badge/Build-Passing-2e7d32?style=flat-square)](#)
 
+> 📄 **Consultation en ligne :** L'intégralité du rapport académique de ce projet est accessible en version interactive et éditable sur [Google Docs — Rapport de Synthèse ML](https://docs.google.com/document/d/1rgOEDrTartWIp7F6RlKRrCq3EBlnP1FYhvfZpL1my58/edit?usp=sharing).
 </div>
 
 ---
@@ -223,31 +224,49 @@ jupyter notebook projet_ml_dropout.ipynb
 
 ## 📚 8. Références Bibliographiques et Fondations Algorithmiques
 
-La conception de ce pipeline repose sur la littérature scientifique du domaine et sur les formalisations algorithmiques de référence suivantes :
+### **[1] Dataset UCI – Predict Students' Dropout and Academic Success :**
+Realinho, V. et al. (2021). *Predict Students' Dropout and Academic Success*. UCI Machine Learning Repository, Dataset ID 697.  
+*Source des données utilisées pour l'entraînement et l'évaluation des modèles.*  
+🔗 [https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success](https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success)
 
-### Littérature Scientifique sur le Décrochage et Dataset
-* **[1] Publication Fondatrice du Jeu de Données :**  
-  Martins, M. V., Tolledo, D., Machado, J., Baptista, L. M., & Realinho, V. (2021). *Early prediction of student’s performance in higher education: a case study.* **Data**, 7(11), 146.  
-  DOI : [10.3390/data7110146](https://doi.org/10.3390/data7110146)
-* **[2] Dépôt Officiel UCI Machine Learning Repository :**  
-  Predict Students' Dropout and Academic Success (Dataset ID: 697).  
-  Lien : [https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success](https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success)
+---
 
-### Fondements Algorithmiques et Sources d'Implémentation
-* **[3] Arbres de Décision et Importance MDI (*From Scratch*) :**  
-  Breiman, L., Friedman, J., Stone, C. J., & Olshen, R. A. (1984). *Classification and Regression Trees.* Chapman and Hall/CRC.  
-  Formulation technique du Mean Decrease Impurity : [Scikit-Learn Ensemble & Tree Documentation](https://scikit-learn.org/stable/modules/tree.html#tree-feature-importance)
-* **[4] Support Vector Machines et Formulation RBF :**  
-  Vapnik, V. N. (1995). *The Nature of Statistical Learning Theory.* Springer-Verlag.  
-  Algorithme d'optimisation séquentielle et noyaux gaussiens : Chang, C.-C., & Lin, C.-J. (2011). *LIBSVM: A Library for Support Vector Machines.* ACM Transactions on Intelligent Systems and Technology.  
-  Lien : [https://www.csie.ntu.edu.tw/~cjlin/libsvm/](https://www.csie.ntu.edu.tw/~cjlin/libsvm/)
-* **[5] Régression Logistique Multinomiale :**  
-  Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning: Data Mining, Inference, and Prediction.* 2e édition, Springer. Chapitre 4 : *Linear Methods for Classification*.
-* **[6] Validation de Clustering et Coefficient de Silhouette :**  
-  Rousseeuw, P. J. (1987). *Silhouettes: A graphical aid to the interpretation and validation of cluster analysis.* **Journal of Computational and Applied Mathematics**, 20, 53–65.  
-  DOI : [10.1016/0377-0427(87)90125-7](https://doi.org/10.1016/0377-0427(87)90125-7)
-* **[7] Initialisation Efficace des K-Means (k-means++) :**  
-  Arthur, D., & Vassilvitskii, S. (2007). *k-means++: The Advantages of Careful Seeding.* Proceedings of the 18th Annual ACM-SIAM Symposium on Discrete Algorithms (SODA), 1027–1035.
+### **[2] Article scientifique :**
+Martins, M. V. et al. (2021). *Early Prediction of student's Performance in Higher Education: A Case Study*. WorldCIST 2021, pp. 166–175. DOI: 10.1007/978-3-030-72657-7_16.  
+*Référence scientifique pour la prédiction de la réussite académique.*  
+🔗 [https://doi.org/10.1007/978-3-030-72657-7_16](https://doi.org/10.1007/978-3-030-72657-7_16)
+
+---
+
+### **[3] Arbres de décision :**
+Breiman, L. et al. (1984). *Classification and Regression Trees*. Wadsworth.  
+*Référence pour l'algorithme CART et le critère de Gini.*  
+🔗 [https://scikit-learn.org/stable/modules/tree.html](https://scikit-learn.org/stable/modules/tree.html)
+
+---
+
+### **[4] Support Vector Machines (SVM) :**
+Vapnik, V. N. (1995). *The Nature of Statistical Learning Theory*. Springer.  
+*Référence théorique pour la classification par SVM.*  
+🔗 [https://scikit-learn.org/stable/modules/svm.html](https://scikit-learn.org/stable/modules/svm.html)
+
+---
+
+### **[5] Régression logistique :**
+Hastie, T., Tibshirani, R. & Friedman, J. (2009). *The Elements of Statistical Learning*. Springer.  
+*Référence théorique pour la régression logistique.*  
+🔗 [https://scikit-learn.org/stable/modules/linear_model.html](https://scikit-learn.org/stable/modules/linear_model.html)
+
+---
+
+### **[6] K-Means et Silhouette :**
+Rousseeuw, P. J. (1987). *Silhouettes: A graphical aid to the interpretation and validation of cluster analysis*.  
+*Référence pour l'évaluation du clustering par Silhouette.*  
+🔗 [https://doi.org/10.1016/0377-0427(87)90125-7](https://doi.org/10.1016/0377-0427(87)90125-7)
+
+Arthur, D. & Vassilvitskii, S. (2007). *k-means++: The Advantages of Careful Seeding*. SODA '07.  
+*Référence pour l'initialisation k-means++.*  
+🔗 [https://research.google/pubs/k-means-the-advantages-of-careful-seeding/](https://research.google/pubs/k-means-the-advantages-of-careful-seeding/)
 
 ---
 

@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -40,6 +41,25 @@ def encode_target(y):
     inv_mapping = {0: "Dropout", 1: "Enrolled", 2: "Graduate"}
     y_encoded = y.map(mapping).values
     return y_encoded, mapping, inv_mapping
+
+def save_clean_data(X, y_encoded, output_path="data/processed/data_clean.csv"):
+    """
+    Combine les features nettoyées et la cible encodée, puis sauvegarde
+    le fichier dans le dossier 'data/processed/'.
+    Crée automatiquement le dossier s'il n'existe pas.
+    """
+    # Créer le répertoire parent si nécessaire
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+
+    # Concaténation de X et Target
+    df_clean = X.copy()
+    df_clean["Target"] = y_encoded
+
+    # Sauvegarde en CSV
+    df_clean.to_csv(output_path, index=False)
+    print(f" Données nettoyées sauvegardées avec succès : {output_path} ({df_clean.shape[0]} lignes, {df_clean.shape[1]} colonnes)")
+    return df_clean
+
 
 
 def prepare_train_test(X, y_encoded, test_size=0.2, random_state=42):
